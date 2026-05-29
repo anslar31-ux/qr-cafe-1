@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AppProvider } from './context/AppContext';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 import Landing from './pages/Customer/Landing';
 import Auth from './pages/Auth/Auth';
@@ -41,6 +42,7 @@ function App() {
           <Route path="/" element={<Navigate to="/app/auth" />} />
         </Routes>
       </Router>
+      <SpeedInsights />
     </AppProvider>
   );
 }
